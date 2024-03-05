@@ -234,7 +234,7 @@ def main():
 
             # Append username, bio, and links to the usernames_bio list
             usernames_bio.append(
-                [follower, emails, links[1]]
+                [follower, emails, sort_followers[1]]
             )
         except Exception:
             MAX_USERS += 1
