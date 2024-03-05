@@ -32,4 +32,4 @@ python main.py
 
 - It will be in `.txt` file created after script finished.
 
-<div align="center"><img src="./Assets/cat.gif" width="220" height="220" style="display: flex; "></div>
+<div align="center"><img src="./Assets/cat.gif" width="220" height="220" style="display: flex; " alt="Cat typing"></div>
