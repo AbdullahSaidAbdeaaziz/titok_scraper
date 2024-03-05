@@ -13,7 +13,7 @@
 1- clone repo
 
 ```shell
-git clone https://github.com/AbdullahSaidAbdeaaziz/titok_scraper && cd titok_scraper
+git clone https://github.com/AbdullahSaidAbdeaaziz/titok_scraper.git && cd titok_scraper
 ```
 
 2- Install requirements packages
@@ -30,4 +30,6 @@ python main.py
 
 ### Output
 
-- will be in txt file created after script finished.
+- It will be in `.txt` file created after script finished.
+
+<div align="center"><img src="./Assets/cat.gif" width="220" height="220" style="display: flex; "></div>
