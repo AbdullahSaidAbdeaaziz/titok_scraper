@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from fake_useragent import UserAgent
 from prettytable import PrettyTable
 from time import sleep
 import re
@@ -142,7 +143,7 @@ def extract_emails(text):
 
 # Main function
 def main():
-    username = input("Enter username of tiktok(ex: gwynibear_):")
+    username = input("Enter username of tiktok(ex: gwynibear_): ")
     tiktok_url = "https://www.tiktok.com/"
     email = input('Enter your email address you create Tiktok account with: ')
     password = input('Enter your password of email: ')
@@ -151,6 +152,11 @@ def main():
 
     # Set up Chrome webdriver
     _options = webdriver.ChromeOptions()
+    # Change user agent randomly for untracked
+    ua = UserAgent()
+    choose_user_agent = ua.random
+    print('user_agent: ', choose_user_agent)
+    _options.add_argument(f"--user-agent={choose_user_agent}")
     driver = webdriver.Chrome(service=Service(executable_path='./chromedriver.exe', options=_options))
 
     # Open TikTok website
@@ -234,7 +240,7 @@ def main():
 
             # Append username, bio, and links to the usernames_bio list
             usernames_bio.append(
-                [follower, emails, sort_followers[1]]
+                [follower, emails, links[1]]
             )
         except Exception:
             MAX_USERS += 1
